@@ -1,32 +1,16 @@
-name: Sedstart Prod
- 
+name: Sedstart Prod 
 on:
-
-  workflow_dispatch:
- 
+  workflow_dispatch: 
 jobs:
-
   sedstart-run:
-
     runs-on: ubuntu-latest
-
     steps:
-
       - name: Trigger SedStart test run
-
         uses: sedinqa/sedstart@v1
-
         with:
-
           api_key: ${{ secrets.SEDSTART_API_KEY_PROD }}
-
           project_id: 4731
-
           test_id: 578
-
           profile_id: 970
-
           browser: chrome
-
           headless: false
- 
